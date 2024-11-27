@@ -13,6 +13,7 @@ gomitas = "2"
 almendras = "3"
 salir = "4"
 print("\n")
+##Sin While true
 opcion = str(input("Selecciona el número del producto que deseas llevar: "))
 while (opcion == "1") or (opcion == "2") or (opcion == "3") or (opcion == "4"):
     if(opcion == chocolatina):
