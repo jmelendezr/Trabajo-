@@ -1,4 +1,5 @@
 print("Bienvenido a la dulcería!")
+print("\n")
 print("Este es nuestro catálogo")
 print("1. Chocolatina 2000")
 print("2. Gomitas 2500")
@@ -9,10 +10,11 @@ precio_alm = int(5000)
 chocolatina = "1"
 gomitas = "2"
 almendras = "3"
+print("\n")
 opcion = str(input("Selecciona el número del producto que deseas llevar: "))
 while (opcion == "1") or (opcion == "2") or (opcion == "3"):
-        if(opcion == chocolatina):
-            cantidad = int(input("Cuantos productos de ese tipo desea llevar?"))
+    if(opcion == chocolatina):
+            cantidad = int(input("Cuantos productos de ese tipo desea llevar? "))
             if (cantidad > 0) and (cantidad <= 5):
                 def sin_descuento(cantidad,precio_choc):
                     return int(cantidad*precio_choc)
@@ -35,7 +37,7 @@ while (opcion == "1") or (opcion == "2") or (opcion == "3"):
                     valor_2 = int((cantidad*precio_choc)- valor_1)
                     return valor_2
                 print("Su valor a pagar es de",tercer_descuento(cantidad,precio_choc))
-        elif(opcion == gomitas):
+    elif(opcion == gomitas):
             cantidadg = int(input("Cuantos productos de ese tipo desea llevar?"))
             if (cantidadg > 0) and (cantidadg <= 5):
                 def sin_descuentog(cantidadg,precio_gom):
@@ -59,7 +61,7 @@ while (opcion == "1") or (opcion == "2") or (opcion == "3"):
                     valorg_2 = int((cantidadg*precio_gom)- valorg_1)
                     return valorg_2
                 print("Su valor a pagar es de",tercer_descuentog(cantidadg,precio_gom))
-        elif(opcion == almendras):
+    elif(opcion == almendras):
             cantidada = int(input("Cuantos productos de ese tipo desea llevar? "))
             if (cantidada > 0) and (cantidada <= 5):
                 def sin_descuentoa(cantidada,precio_alm):
@@ -83,7 +85,13 @@ while (opcion == "1") or (opcion == "2") or (opcion == "3"):
                     valora_2 = int((cantidada*precio_alm)- valora_1)
                     return valora_2
                 print("Su valor a pagar es de",tercer_descuentoa(cantidada,precio_alm))
-        else:
-            print("Digite un valor válido")     
+    else:
+            print("Digite un valor válido") 
+    print("\n")
+    print("Este es nuestro catálogo")
+    print("1. Chocolatina 2000")
+    print("2. Gomitas 2500")
+    print("3. Almendras 5000")
+    opcion = str(input("Selecciona el número del producto que deseas llevar: "))    
 else:
     print("Digita una opción válida")
